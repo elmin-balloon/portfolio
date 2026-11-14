@@ -7,46 +7,52 @@
     <meta name="description" content="Hoofdpagina">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="max-w-5xl mx-auto px-4 py-4">
 
     <header class="flex justify-between items-center sm:flex-row-reverse border border-gray-400 p-3">
-        <a href="index.html" aria-label="Logo" class="border border-gray-400 block w-12 h-12"></a>
+        <a href="index.html" aria-label="Logo" class="border border-gray-400 block w-12 h-12 shrink-0"><img src="assets/images/beelogo.png" alt=""></a>
         <nav class="relative">
             <input type="checkbox" id="menu" class="peer sr-only">
-            <label for="menu" class="sm:hidden block border border-gray-400 bg-white px-3 py-1 text-2xl cursor-pointer">&#9776;</label>
-            <ul class="hidden peer-checked:flex flex-col absolute right-0 mt-1 z-10 gap-2 border border-gray-400 p-3 sm:static sm:mt-0 sm:flex sm:flex-row sm:flex-wrap sm:gap-x-4 sm:py-2">
-                    <li><a href="index.html" class="font-bold underline">home</a></li>
-                    <li><a href="portfolio.html">portfolio</a></li>
-                    <li><a href="project.html">project</a></li>
-                    <li><a href="contact.html">contact</a></li>
+            <label for="menu" aria-label="Menu" class="sm:hidden block border border-gray-400 bg-white px-3 py-1 text-2xl cursor-pointer peer-focus-visible:outline">&#9776;</label>
+            <ul class="hidden peer-checked:flex flex-col absolute right-0 mt-1 z-10 gap-1 min-w-32 border border-gray-400 bg-white p-3 sm:static sm:mt-0 sm:flex sm:flex-row sm:flex-wrap sm:gap-x-4 sm:py-2 sm:min-w-0 sm:bg-transparent">
+                    <li><a href="index.html" class="block py-1 sm:py-0 font-bold underline">home</a></li>
+                    <li><a href="portfolio.html" class="block py-1 sm:py-0">portfolio</a></li>
+                    <li><a href="project.html" class="block py-1 sm:py-0">project</a></li>
+                    <li><a href="contact.html" class="block py-1 sm:py-0">contact</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 my-4">
-        <main class="lg:col-span-2 border border-gray-400 p-4">
-            <div class="border border-gray-400 w-full aspect-video mb-4"></div>
-            <h1 class="font-bold text-3xl md:text-4xl pb-3">Titel</h1>
-            <p class="pb-3">Tekst</p>
+        <main class="lg:col-span-2 border border-gray-400 p-4 min-w-0">
+            <div class="border border-gray-400 w-full aspect-video mb-4"><img src="assets/images/bee2.png" alt="" class="w-full h-full"></div>
+            <h1 class="font-bold text-2xl sm:text-3xl md:text-4xl pb-3">Welkom op mijn website</h1>
+            <p class="pb-3">Klik op de knop om naar mijn portfolio te gaan</p>
             <a href="portfolio.html" class="inline-block border border-gray-400 px-4 py-2">Knop</a>
         </main>
 
-        <aside class="lg:order-first border border-gray-400 p-4">
-            <div class="flex flex-row-reverse lg:flex-col gap-4">
-                <div class="border border-gray-400 shrink-0 w-24 h-24 sm:w-40 sm:h-40 lg:w-full lg:h-auto lg:aspect-video"></div>
-                <div>
-                    <h2 class="font-bold text-xl pb-2">Titel</h2>
-                    <p>Tekst</p>
-                </div>
+        <aside class="lg:order-first border border-gray-400 p-4 min-w-0">
+            <div class="flex flex-row-reverse justify-between lg:flex-col lg:justify-start gap-4">
+            <div class="border border-gray-400 shrink-0 w-24 h-24 sm:w-40 sm:h-40 lg:w-full lg:h-auto lg:aspect-video"><img src="assets/images/bee1.png" alt=""></div>
+            <div class="min-w-0">
+                <h2 class="font-bold text-xl pb-2 text-left">Over mij</h2>
+                <p class="text-left">Hallo mijn naam is Elmin Pijuk ik ben student aan AP Hogeschool Antwerpen.
+                                     Ik ben 20 jaar oud en in mijn vrije tijd game ik graag en ga ik vaak buiten wandelen.
+                                     Ik studeer graduaat systeem en netwerkbeheer.
+                </p>
+            </div>
             </div>
         </aside>
     </div>
 
-    <footer class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 border border-gray-400 p-3">
+    <footer class="flex flex-wrap justify-between items-center gap-x-4 gap-y-2 sm:flex-nowrap sm:flex-row sm:gap-2 border border-gray-400 p-3">
         <p>Elmin Pijuk</p>
-        <div>
+        <div class="order-last w-full sm:order-none sm:w-auto break-words">
             <p>elmin.pijuk@student.ap.be</p>
             <p>AP Hogeschool Antwerpen</p>
         </div>

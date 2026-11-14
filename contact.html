@@ -7,12 +7,15 @@
     <meta name="description" content="Contact">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 <div class="max-w-5xl mx-auto px-4 py-4">
 
-    <header class="flex justify-between items-center border border-gray-400 bg-gray-200 p-3">
-        <a href="index.html" aria-label="Logo" class="border border-gray-400 bg-gray-100 block w-12 h-12"></a>
+    <header class="flex justify-between items-center border border-gray-400 p-3">
+        <a href="index.html" aria-label="Logo" class="border border-gray-400 bg-gray-100 block w-12 h-12"><img src="assets/images/beelogo.png" alt=""></a>
         <nav class="relative">
             <input type="checkbox" id="menu" class="peer sr-only">
             <label for="menu" class="sm:hidden block border border-gray-400 bg-white px-3 py-1 text-2xl cursor-pointer">&#9776;</label>
@@ -27,38 +30,42 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 my-4">
         <main class="lg:col-span-2 border border-gray-400 p-4">
-            <h1 class="font-bold text-3xl md:text-4xl pb-3">Titel</h1>
-            <p class="pb-4">Tekst</p>
+            <h1 class="font-bold text-3xl md:text-4xl pb-3">Contact</h1>
+            <p class="pb-4">Vul hier uw contact informatie a.u.b.</p>
             <form name="contact" method="POST" data-netlify="true" class="flex flex-col gap-4">
                 <div class="flex flex-col gap-1">
                     <label for="naam">naam</label>
-                    <input type="text" id="naam" name="naam" class="border border-gray-400 p-2 w-full">
+                    <input type="text" id="naam" name="naam" autocomplete="name" required class="border border-gray-400 p-2 w-full rounded-md">
                 </div>
                 <div class="flex flex-col gap-1">
                     <label for="email">e-mail</label>
-                    <input type="email" id="email" name="email" class="border border-gray-400 p-2 w-full">
+                    <input type="email" id="email" name="email" autocomplete="email" aria-describedby="email-hulp email-fout" required class="peer border border-gray-400 p-2 w-full rounded-md">
+                    <p id="email-hulp" class="text-sm">Ik antwoord op dit adres.</p>
+                    <p id="email-fout" class="hidden peer-user-invalid:block text-sm text-red-700">
+                        Dit e-mailadres klopt niet. Controleer of er een @ en een punt in staat bijvoorbeeld naam@voorbeeld.be.
+                    </p>
                 </div>
                 <div class="flex flex-col gap-1">
                     <label for="bericht">bericht</label>
-                    <textarea id="bericht" name="bericht" rows="6" class="border border-gray-400 p-2 w-full"></textarea>
+                    <textarea id="bericht" name="bericht" rows="6" class="border border-gray-400 p-2 w-full rounded-md"></textarea>
                 </div>
-                <button type="submit" class="self-start inline-block border border-gray-400 bg-gray-200 px-4 py-2">Verstuur</button>
+                <button type="submit" class="self-start inline-block border border-gray-400 px-4 py-2 rounded-md">Verstuur</button>
                 <p class="pt-3 text-center">ik antwoord binnen de 3 werkdagen</p>
             </form>
         </main>
 
-        <aside class="lg:self-start border border-gray-400 bg-gray-100 p-4">
+        <aside class="lg:self-start border border-gray-400 p-4">
             <h2 class="font-bold text-xl pb-2">Titel</h2>
             <p>Tekst</p>
                 <div class="flex gap-2 pt-3">
-                    <a href="#" class="w-8 h-8 rounded-full bg-gray-300 border border-gray-400"></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-gray-300 border border-gray-400"></a>
-                    <a href="#" class="w-8 h-8 rounded-full bg-gray-300 border border-gray-400"></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-400"></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-400"></a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-gray-400"></a>
                 </div>
         </aside>
     </div>
 
-    <footer class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 border border-gray-400 bg-gray-200 p-3">
+    <footer class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 border border-gray-400 p-3">
         <p>Elmin Pijuk</p>
         <div>
             <p>elmin.pijuk@student.ap.be</p>
