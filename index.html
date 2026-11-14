@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Elmin Pijuk</title>
+    <meta name="description" content="Hoofdpagina">
+    <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="max-w-5xl mx-auto px-4 py-4">
+
+    <header class="flex justify-between items-center sm:flex-row-reverse border border-gray-400 p-3">
+        <a href="index.html" aria-label="Logo" class="border border-gray-400 block w-12 h-12"></a>
+        <nav class="relative">
+            <input type="checkbox" id="menu" class="peer sr-only">
+            <label for="menu" class="sm:hidden block border border-gray-400 bg-white px-3 py-1 text-2xl cursor-pointer">&#9776;</label>
+            <ul class="hidden peer-checked:flex flex-col absolute right-0 mt-1 z-10 gap-2 border border-gray-400 p-3 sm:static sm:mt-0 sm:flex sm:flex-row sm:flex-wrap sm:gap-x-4 sm:py-2">
+                    <li><a href="index.html" class="font-bold underline">home</a></li>
+                    <li><a href="portfolio.html">portfolio</a></li>
+                    <li><a href="project.html">project</a></li>
+                    <li><a href="contact.html">contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 my-4">
+        <main class="lg:col-span-2 border border-gray-400 p-4">
+            <div class="border border-gray-400 w-full aspect-video mb-4"></div>
+            <h1 class="font-bold text-3xl md:text-4xl pb-3">Titel</h1>
+            <p class="pb-3">Tekst</p>
+            <a href="portfolio.html" class="inline-block border border-gray-400 px-4 py-2">Knop</a>
+        </main>
+
+        <aside class="lg:order-first border border-gray-400 p-4">
+            <div class="flex flex-row-reverse lg:flex-col gap-4">
+                <div class="border border-gray-400 shrink-0 w-24 h-24 sm:w-40 sm:h-40 lg:w-full lg:h-auto lg:aspect-video"></div>
+                <div>
+                    <h2 class="font-bold text-xl pb-2">Titel</h2>
+                    <p>Tekst</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2 border border-gray-400 p-3">
+        <p>Elmin Pijuk</p>
+        <div>
+            <p>elmin.pijuk@student.ap.be</p>
+            <p>AP Hogeschool Antwerpen</p>
+        </div>
+        <p>&copy; 2026</p>
+    </footer>
+
+</div>
+</body>
+</html>
