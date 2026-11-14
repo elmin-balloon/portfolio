@@ -29,7 +29,7 @@
         <main class="lg:col-span-2 border border-gray-400 p-4">
             <h1 class="font-bold text-3xl md:text-4xl pb-3">Titel</h1>
             <p class="pb-4">Tekst</p>
-            <form class="flex flex-col gap-4">
+            <form name="contact" method="POST" data-netlify="true" class="flex flex-col gap-4">
                 <div class="flex flex-col gap-1">
                     <label for="naam">naam</label>
                     <input type="text" id="naam" name="naam" class="border border-gray-400 p-2 w-full">
@@ -43,6 +43,7 @@
                     <textarea id="bericht" name="bericht" rows="6" class="border border-gray-400 p-2 w-full"></textarea>
                 </div>
                 <button type="submit" class="self-start inline-block border border-gray-400 bg-gray-200 px-4 py-2">Verstuur</button>
+                <p class="pt-3 text-center">ik antwoord binnen de 3 werkdagen</p>
             </form>
         </main>
 
